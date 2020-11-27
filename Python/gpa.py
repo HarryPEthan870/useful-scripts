@@ -43,17 +43,18 @@ def letter_grade():
 x = totalvaravr - 70
 y = x * 0.067
 z = y + 2
-zv2 = str(z)
+zv2 = z
 gpa = round(zv2,3)
 #export to file var
 def export_grades():
     f.write("your average from all your classes is " + str(totalvaravr))
     letter_grade()
-    f.write("\nYour GPA is " + gpa)
+    f.write("\nYour GPA is " + str(gpa))
 #export to file
 f = open("grades.txt", "w")
 export_grades()
 #print
 f.close()
 f = open("grades.txt", "r")
+print(gpa)
 print(f.read())
