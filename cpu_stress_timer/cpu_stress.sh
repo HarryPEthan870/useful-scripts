@@ -7,4 +7,5 @@ read mintime
 #convert to seconds
 time=$(($mintime * 60))
 #run python script
+touch temps.txt
 python3 timer.py $time
