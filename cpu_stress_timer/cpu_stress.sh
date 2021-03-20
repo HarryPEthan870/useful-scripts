@@ -9,5 +9,3 @@ time=$(($mintime * 60))
 #run python script
 echo $time >  num_interface.txt
 python3 timer.py
-#set desingated time
-sleep $time && killall yes

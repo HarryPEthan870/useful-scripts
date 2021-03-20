@@ -1,6 +1,6 @@
 
 #imports
-import time
+import time, os
 #coutdown function
 def countdown(t):
     while t:
@@ -9,6 +9,7 @@ def countdown(t):
         print(timer, end="\r")
         time.sleep(1)
         t -= 1
+    os.popen('killall yes')
     print("Time's up")
 with open("num_interface.txt") as f:
     t = int(f.read())
