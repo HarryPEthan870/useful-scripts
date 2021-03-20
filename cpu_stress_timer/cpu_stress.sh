@@ -7,5 +7,4 @@ read mintime
 #convert to seconds
 time=$(($mintime * 60))
 #run python script
-echo $time >  num_interface.txt
-python3 timer.py
+python3 timer.py $time
