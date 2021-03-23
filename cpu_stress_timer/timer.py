@@ -3,6 +3,7 @@
 import time, os, sys
 #coutdown function
 def countdown(t):
+    print("\n")
     while t:
         mins, secs = divmod(t, 60)
         timer = '{:02d}:{:02d}'.format(mins,secs)
@@ -13,6 +14,8 @@ def countdown(t):
     print("Time's up")
     write()
     print("Your temps are stored in temps.txt. You will find this file in the directory you ran this in.")
+    time.sleep(1.5)
+    sys.exit()
 t = int(float(sys.argv[1]))
 ##file writing
 def write():
@@ -23,4 +26,7 @@ def write():
     f.write(" seconds These are the temps")
     f.close()
     temps = os.popen('inxi -s >> temps.txt')
-countdown(t)
+try:
+    countdown(t)
+except:
+    sys.exit()
