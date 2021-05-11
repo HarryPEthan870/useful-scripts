@@ -2,6 +2,7 @@
 import datetime as dt
 import time, webbrowser, mouse
 global TIME
+
 # class
 class infoClass:
     def __init__(self, cname, sclink, tlink, stime):
