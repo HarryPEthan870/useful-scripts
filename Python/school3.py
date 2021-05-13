@@ -49,7 +49,7 @@ def run_stuff(name):
     name.launched()
 while True:
     TIME = dt.datetime.now().strftime("%H:%M")
-    time.sleep(20)
+    time.sleep(60)
     if TIME == MATH.stime:
         run_stuff(MATH)
     elif TIME == ELA.stime:
