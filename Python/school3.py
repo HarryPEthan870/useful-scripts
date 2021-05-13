@@ -14,10 +14,10 @@ class infoClass:
         webbrowser.open(self.tlink)
     def running(self):
         print(self.cname)
-        print("has launched")
+        print("Has launched")
     def launched(self):
         print(self.cname)
-        print("Had completed")
+        print("Has completed")
 
 # information
 MATH = infoClass("Math", "https://gateschili.schoology.com/course/2988867080", "https://teams.microsoft.com/l/meetup-join/19%3Ameeting_ZjUzZGQ0NjMtYTk1ZS00ZjRjLWFkYTItYTIyOWUzMjQ4MjI3%40thread.v2/0?context=%7B%22Tid%22%3A%22e4c5ba9c-7fc0-4a21-8fa7-3e6a1d404866%22%2C%22Oid%22%3A%22ee8a520f-ae60-4857-a361-6d30a6179ada%22%7D", "7:32")
