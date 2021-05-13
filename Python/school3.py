@@ -2,7 +2,6 @@
 import datetime as dt
 import time, webbrowser, mouse
 global TIME
-
 # class
 class infoClass:
     def __init__(self, cname, sclink, tlink, stime):
@@ -13,6 +12,13 @@ class infoClass:
     def launch_all(self):
         webbrowser.open(self.sclink)
         webbrowser.open(self.tlink)
+    def running(self):
+        print(self.cname)
+        print("has launched")
+    def launched(self):
+        print(self.cname)
+        print("Had completed")
+
 # information
 MATH = infoClass("Math", "https://gateschili.schoology.com/course/2988867080", "https://teams.microsoft.com/l/meetup-join/19%3Ameeting_ZjUzZGQ0NjMtYTk1ZS00ZjRjLWFkYTItYTIyOWUzMjQ4MjI3%40thread.v2/0?context=%7B%22Tid%22%3A%22e4c5ba9c-7fc0-4a21-8fa7-3e6a1d404866%22%2C%22Oid%22%3A%22ee8a520f-ae60-4857-a361-6d30a6179ada%22%7D", "7:32")
 ELA = infoClass("ELA", "https://gateschili.schoology.com/course/2988843027", "https://teams.microsoft.com/l/meetup-join/19%3A09835d9f2f7a4a899243ece210611498%40thread.tacv2/1599831942980?context=%7B%22Tid%22%3A%22e4c5ba9c-7fc0-4a21-8fa7-3e6a1d404866%22%2C%22Oid%22%3A%2272a88987-e123-4d69-a53b-6a3a23667df9%22%7D", "8:17")
@@ -34,36 +40,27 @@ def mouse_2():
     mouse.move(2889, 581, absolute=True, duration=0.2)
     mouse.click("left")
 
-# time calulation
-
+# function
+def run_stuff(name):
+    name.running()
+    mouse()
+    name.launch_all()
+    mouse_2()
+    name.launched()
 while True:
     TIME = dt.datetime.now().strftime("%H:%M")
     time.sleep(20)
     if TIME == MATH.stime:
-        mouse()
-        MATH.launch_all()
-        mouse_2()
+        run_stuff(MATH)
     elif TIME == ELA.stime:
-        mouse()
-        ELA.launch_all()
-        mouse_2()
+        run_stuff(ELA)
     elif TIME == BIO.stime:
-        mouse()
-        BIO.launch_all()
-        mouse_2()
+        run_stuff(BIO)
     elif TIME == DDP.stime:
-        mouse()
-        DDP.launch_all()
-        mouse_2()
+        run_stuff(DDP)
     elif TIME == Career.stime:
-        mouse()
-        Career.launch_all()
-        mouse_2()
+        run_stuff(Career)
     elif TIME == Global.stime:
-        mouse()
-        Global.launch_all()
-        mouse_2()
+        run_stuff(Global)
     elif TIME == Latin.stime:
-        mouse()
-        Latin.launch_all()
-        mouse_2()
+        run_stuff(Latin)
