@@ -1,5 +1,7 @@
+import functools
 terms_l = []
 terms = int(input("enter what term number you want: "))
+@functools.lru_cache
 def fibonacci(num):
     if num <= 1:
         return num
